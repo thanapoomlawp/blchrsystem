@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700;800&family=Noto+Sans+Thai:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* -------------------------------------------------
+   BASE DESIGN TOKENS
+   ------------------------------------------------- */
+@layer base {
+  :root {
+    --background: 220 20% 97%;
+    --foreground: 224 30% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 224 30% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 224 30% 15%;
+    --primary: 224 72% 22%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 43 74% 52%;
+    --secondary-foreground: 224 72% 15%;
+    --muted: 220 15% 94%;
+    --muted-foreground: 220 10% 50%;
+    --accent: 43 74% 52%;
+    --accent-foreground: 224 72% 15%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 220 15% 88%;
+    --input: 220 15% 88%;
+    --ring: 224 72% 22%;
+    --radius: 0.75rem;
+    --font-body: 'Sarabun', 'Noto Sans Thai', sans-serif;
+    --font-heading: 'Sarabun', 'Noto Sans Thai', sans-serif;
+  }
+
+  .dark {
+    --background: 224 30% 8%;
+    --foreground: 220 15% 95%;
+    --card: 224 25% 12%;
+    --card-foreground: 220 15% 95%;
+    --popover: 224 25% 12%;
+    --popover-foreground: 220 15% 95%;
+    --primary: 43 74% 52%;
+    --primary-foreground: 224 30% 10%;
+    --secondary: 224 72% 22%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 224 20% 18%;
+    --muted-foreground: 220 10% 60%;
+    --accent: 43 74% 52%;
+    --accent-foreground: 224 30% 10%;
+    --destructive: 0 62.8% 40%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 224 20% 20%;
+    --input: 224 20% 20%;
+    --ring: 43 74% 52%;
+  }
+
+  *, *::before, *::after {
+    box-sizing: border-box;
+    border-color: hsl(var(--border));
+  }
+
+  html, body, #root {
+    min-height: 100%;
+  }
+
+  body {
+    margin: 0;
+    background: hsl(var(--background));
+    color: hsl(var(--foreground));
+    font-family: var(--font-body);
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    font-weight: 600;
+    margin: 0;
+  }
+}
